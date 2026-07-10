@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #b71c1c;
+}
+
+h1,
+h2 {
+    margin-bottom: 15px;
+}
+
+.panel-control,
+.acciones-extra,
+.inventario {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input,
+select,
+form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #d32f2f;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #b71c1c;
+}
+
+.grid-unidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 15px;
+}
+
+.tarjeta {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    background: white;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tarjeta.analisis {
+    border-left: 6px solid #fbc02d;
+}
+
+.tarjeta.disponible {
+    border-left: 6px solid #388e3c;
+}
+
+.tarjeta.bloqueado {
+    border-left: 6px solid #757575;
+    background-color: #f5f5f5;
+}
+
+.acciones-tarjeta {
+    display: flex;
+    gap: 5px;
+    margin-top: auto;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+
+.acciones-tarjeta button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.btn-utilizar {
+    background-color: #2e7d32;
+}
+
+.btn-utilizar:hover {
+    background-color: #1b5e20;
+}
+
+.btn-desechar {
+    background-color: #c62828;
+}
+
+.btn-desechar:hover {
+    background-color: #b71c1c;
+}
+
+.btn-bloquear {
+    background-color: #ef6c00;
+}
+
+.btn-bloquear:hover {
+    background-color: #e65100;
+}
+
+.btn-desbloquear {
+    background-color: #0288d1;
+}
+
+.btn-desbloquear:hover {
+    background-color: #01579b;
+}
+
+.notificacion {
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.notificacion.info {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+    border: 1px solid #bbdefb;
+}
+
+.notificacion.exito {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    border: 1px solid #c8e6c9;
+}
+
+.notificacion.alerta {
+    background-color: #fff3e0;
+    color: #e65100;
+    border: 1px solid #ffe0b2;
+}
+
+.notificacion.error {
+    background-color: #ffebee;
+    color: #b71c1c;
+    border: 1px solid #ffcdd2;
+}
+
+.oculto {
+    display: none;
+}
+
+.badge {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: bold;
+}
+
+.badge.analisis {
+    background-color: #fbc02d;
+    color: #333;
+}
+
+.badge.disponible {
+    background-color: #388e3c;
+}
+
+.badge.bloqueado {
+    background-color: #757575;
+}

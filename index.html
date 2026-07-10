@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock de Banco de Sangre</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>🩸 Gestión de Stock Banco de Sangre</h1>
+        <p id="reloj-sistema"></p>
+    </header>
+
+    <main>
+        <section class="panel-control">
+            <h2>Ingresar Nueva Unidad</h2>
+            <form id="form-unidad">
+                <input type="text" id="id-unidad" placeholder="ID (Ej: 001)" required>
+                <select id="grupo-factor" required>
+                    <option value="">Grupo y Factor RH</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+                <select id="componente" required>
+                    <option value="">Componente...</option>
+                    <option value="Glóbulos Rojos">Glóbulos Rojos</option>
+                    <option value="Plasma">Plasma</option>
+                    <option value="Plaquetas">Plaquetas</option>
+                </select>
+                <button type="submit">Registrar Unidad</button>
+            </form>
+        </section>
+
+        <section class="acciones-extra">
+            <input type="text" id="buscador" placeholder="🔍 Buscar por Grupo (Ej: O+)">
+            <div id="notificacion" class="notificacion oculto"></div>
+        </section>
+
+        <section class="inventario">
+            <h2>Inventario Actual</h2>
+            <div id="contenedor-unidades" class="grid-unidades">
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="./assets/js/script.js"></script>
+</body>
+
+</html>
