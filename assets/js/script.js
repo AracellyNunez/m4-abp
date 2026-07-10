@@ -23,11 +23,14 @@ const cargarDatosIniciales = async () => {
             const respuesta = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=3');
             const tareasFalsas = await respuesta.json();
 
-            tareasFalsas.forEach(tarea => {
+            const gruposDisponibles = ['O+', 'AB-', 'O-', 'A+'];
+            const componentesDisponibles = ['Plasma', 'Glóbulos Rojos', 'Plaquetas'];
+
+            tareasFalsas.forEach((tarea, index) => {
                 inventario.agregarUnidad(new UnidadSangre({
-                    id: `EXT-${tarea.id}`,
-                    grupoFactor: tarea.completed ? 'O+' : 'A-',
-                    componente: 'Plasma',
+                    id: `BCO-${tarea.id}`,
+                    grupoFactor: gruposDisponibles[index % gruposDisponibles.length],
+                    componente: componentesDisponibles[index % componentesDisponibles.length],
                     estado: 'Disponible'
                 }));
             });
