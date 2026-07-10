@@ -23,7 +23,7 @@ const cargarDatosIniciales = async () => {
             const respuesta = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=3');
             const tareasFalsas = await respuesta.json();
 
-            const gruposDisponibles = ['O+', 'AB-', 'O-', 'A+'];
+            const gruposDisponibles = ['O+', 'AB-', 'O-', 'A+', 'B+'];
             const componentesDisponibles = ['Plasma', 'Glóbulos Rojos', 'Plaquetas'];
 
             tareasFalsas.forEach((tarea, index) => {
